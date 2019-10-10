@@ -1,0 +1,12 @@
+# only for Mac or Linux
+# place the file at ~/.ssh/config
+
+Host my-first-instance
+      Hostname <insert hostname or IP here>
+      User ec2-user
+      IdentityFile ~/ec2-masterclass/ec2-masterclass.pem
+
+# Host nas01
+#      HostName 192.168.1.100
+#      User root
+#      IdentityFile ~/.ssh/nas01.key

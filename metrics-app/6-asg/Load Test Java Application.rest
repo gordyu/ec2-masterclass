@@ -1,0 +1,26 @@
+{
+   "structureVersion": "1.5.0",
+   "registrationDate": "2018-01-29T12:44:11+11:00",
+   "atom": {
+      "url": "https://maps.googleapis.com/maps/api/geocode/json?address=Meran",
+      "verb": "GET",
+      "body": null,
+      "headers": "{\n   \"Accept\": \"application/json\",\n   \"Content-Type\": \"application/json; charset=utf-8\"\n}",
+      "bodyKind": "json",
+      "withCredentials": false
+   },
+   "scenario": {
+      "code": "$.ajax({\n\turl:'https://maps.googleapis.com/maps/api/geocode/json?address=Meran',\n\tmethod:'GET',\n\tsuccess: function(res){\n\t\tdone(res);\n\t},\n\terror: function(err){\n\t\tdone(err);\n}});\n"
+   },
+   "massive": {
+      "batch": "[\n   {\n      \"verb\": \"GET\",\n      \"url\": \"http://application-lb-demo-961192093.us-east-2.elb.amazonaws.com/cpu\",\n      \"body\": null,\n      \"headers\": null,\n      \"withCredentials\": false\n   },\n   {\n      \"verb\": \"GET\",\n      \"url\": \"http://application-lb-demo-961192093.us-east-2.elb.amazonaws.com/cpu\",\n      \"body\": null,\n      \"headers\": null,\n      \"withCredentials\": false\n   },\n   {\n      \"verb\": \"GET\",\n      \"url\": \"http://application-lb-demo-961192093.us-east-2.elb.amazonaws.com/cpu\",\n      \"body\": null,\n      \"headers\": null,\n      \"withCredentials\": false\n   },\n   {\n      \"verb\": \"GET\",\n      \"url\": \"http://application-lb-demo-961192093.us-east-2.elb.amazonaws.com/cpu\",\n      \"body\": null,\n      \"headers\": null,\n      \"withCredentials\": false\n   },\n   {\n      \"verb\": \"GET\",\n      \"url\": \"http://application-lb-demo-961192093.us-east-2.elb.amazonaws.com/cpu\",\n      \"body\": null,\n      \"headers\": null,\n      \"withCredentials\": false\n   }\n]"
+   },
+   "engine": {
+      "name": "Load Test Java Application",
+      "iterations": 1000,
+      "delay": 100,
+      "warmup": 5,
+      "timeout": 30000,
+      "mode": "massiveAdapter"
+   }
+}
